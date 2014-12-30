@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+<data>
+<record model="ir.ui.view" id="view_invoice_discount_form_inherit">
+       <field name="name">account.discount.form.inherit</field>
+        <field name="model">account.invoice</field>
+	<field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+	
+		<!-- Agrego el descuento antes del descuento por porcentaje -->
+		<xpath expr="//field[@name='invoice_line']/tree/field[@name='discount']" position="before">
+				<field name="discount_amount" on_change="_calcula_precio_onchange(quantity,discount_amount,price_unit)" string="Discount amount" /> 
+		</xpath>
+
+		<!-- Agrego subtotal y reemplazo el subtotal anterior -->
+		<xpath expr="//field[@name='invoice_line']/tree/field[@name='price_subtotal']" position="replace">
+  				<field name="p_subtotal" string="Importe_" />
+		</xpath>	
+		
+		<!--xpath expr="/page[@string='Invoice Lines']//field[@name='amount_untaxed']" position="after">
+			<field name="monto_total" string="amount Sas" /> 
+		</xpath-->
+
+		<!-- Modifico los atributos on_change de quantity y price_unit -->	
+		<field name="quantity" position="attributes">
+			<attribute name="on_change">_calcula_precio_onchange(quantity,discount_amount,price_unit)</attribute>
+		</field>
+		<field name="price_unit" position="attributes">
+			<attribute name="on_change">_calcula_precio_onchange(quantity,discount_amount,price_unit)</attribute>
+		</field>
+		<!--
+		<field name="fiscal_position" position="after">
+			<field name="monto_total" string="Monto Sas" />
+		</field>
+		-->
+		
+		
+        </field> 
+</record>
+
+<!--record model="ir.ui.view" id="view_invoice_discount_form_inherit">
+       <field name="name">account.discount.form.inherit</field>
+        <field name="model">account.invoice.</field>
+	<field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+	
+	
+		<field name="amount_untaxed" position="after">
+			<field name="monto_total" string="Monto Sas" />
+		</field>
+		
+
+		
+		
+        </field> 
+</record-->
+</data>
+</openerp>
+
+

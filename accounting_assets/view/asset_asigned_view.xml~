@@ -7,23 +7,31 @@
 	<field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
         <field name="arch" type="xml">
            <!-- encontrar el nombre del campo e insertar la referencia del campo antes de él -->
+		
+		<xpath expr="//page[@string='General']" position="after">
+  				<page string="Assignation BLA BLA">
+				<group>
+				  <field name="ubication" />
+				  <field name="assigned_to" />
+				  <field name="date_assigned" />
+				  <field name="returned" />
+				</group>
+			</page>
+		</xpath>
+
 		<notebook position="inside">
 			
 			<page string="Assignation">
 				<group>
-				<field name="ubication" />
-				<field name="assigned_to" />
-				<field name="date_assigned" />
-
-				<field name="returned" />
-
+				  <field name="ubication" />
+				  <field name="assigned_to" />
+				  <field name="date_assigned" />
+				  <field name="returned" />
 				</group>
 			</page>
 
 		</notebook>
-		<field name="company_id" position="after">
-			<field name="ubication" string="Asset Ubication"/>
-		</field>
+		
 
         </field>
     </record>

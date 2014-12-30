@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-24 16:49+0000\n"
+"PO-Revision-Date: 2014-11-24 16:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice
+#: view:account.invoice:account_invoice.view_invoice_discount_form_inherit
+msgid "Amount"
+msgstr "Importe"
+
+#. module: account_invoice
+#: field:account.invoice.line,discount_amount:0
+msgid "Discount"
+msgstr "Descuento (monto)"
+
+#. module: account_invoice
+#: view:account.invoice:account_invoice.view_invoice_discount_form_inherit
+msgid "Discount amount"
+msgstr "Descuento (monto)"
+
+#. module: account_invoice
+#: model:ir.model,name:account_invoice.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_invoice
+#: model:ir.model,name:account_invoice.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea factura"
+
+#. module: account_invoice
+#: view:account.invoice:account_invoice.view_invoice_discount_form_inherit
+msgid "_calcula_precio_onchange(quantity,discount_amount,price_unit)"
+msgstr "_calcula_precio_onchange(quantity,discount_amount,price_unit)"
+
+#. module: account_invoice
+#: field:account.invoice.line,p_subtotal:0
+msgid "Amount"
+msgstr "Importe"
+

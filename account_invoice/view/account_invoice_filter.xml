@@ -1,0 +1,19 @@
+<openerp>
+<data>
+<record model="ir.ui.view" id="view_account_invoice_filter_form_inherit">
+       <field name="name">account.invoice.filter.form_inherit</field>
+        <field name="model">account.invoice</field>
+
+	<field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+           <!-- encontrar el nombre del campo e insertar la referencia del campo antes de él -->
+		<xpath expr="//filter[@string='Category of Product']" position="attributes">
+				<attribute name="invisible">1</attribute>
+		</xpath>
+		
+
+        </field>
+    </record>
+</data>
+</openerp>
+

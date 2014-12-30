@@ -7,9 +7,10 @@ from dateutil.relativedelta import relativedelta
 from openerp.osv import fields, osv
 import openerp.addons.decimal_precision as dp
 from openerp.tools.translate import _
+
 class account_assets(osv.osv):
     _inherit = 'account.asset.asset'
-    decription = 'Asset whit new fields'
+    decription = 'Asset with new fields'
 
     _columns ={
     		'ubication':fields.char('Asset Ubication',help="The ubication of this assets"),    

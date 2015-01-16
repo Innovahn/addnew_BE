@@ -184,6 +184,7 @@ class mcheck(osv.Model):
 		'reference': fields.char('Pay to', 
 		                         help="Transaction reference number.", copy=False,required=True),
 		'number': fields.char('Number'),
+		'obs':fields.text('obs',  ),
         	'type':fields.selection([
 			('sale','Sale'),
 			('purchase','Purchase'),

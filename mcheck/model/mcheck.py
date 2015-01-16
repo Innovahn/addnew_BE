@@ -182,7 +182,7 @@ class mcheck(osv.Model):
 		'amounttext': fields.function(_get_totalt,type='char',string='Total',),
 		'tax_amount':fields.float('Tax Amount', digits_compute=dp.get_precision('Account'), ),
 		'reference': fields.char('Pay to', 
-		                         help="Transaction reference number.", copy=False),
+		                         help="Transaction reference number.", copy=False,required=True),
 		'number': fields.char('Number'),
         	'type':fields.selection([
 			('sale','Sale'),
